@@ -1,6 +1,5 @@
 var lbloco = -1
 var vida = 20
-const vida$ = document.getElementById('vida')
 function shuffleArray(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -14,17 +13,9 @@ function sleep(milliseconds){
     while( (end-start) < milliseconds){
         end = new Date().getTime();
     }
-   }
+}
 var random = (min, max) => parseInt(Math.random() * (max - min + 1)) + min
-let img1 = random(0, 1)
-let img2 = random(2, 3)
-let img3 = random(4, 5)
-let img4 = random(6, 7)
-let img5 = random(8, 9)
-let img6 = random(10, 11)
-let img7 = random(12, 13)
-let img8 = random(14, 15)
-var listnum = [img1, img2, img3, img4, img5, img6, img7, img8]
+var listnum = [random(0, 1), random(2, 3), random(4, 5), random(6, 7), random(8, 9), random(10, 11), random(12, 13), random(14, 15)]
 for (i in listnum) {
     listnum.push(listnum[i])
 }
@@ -74,7 +65,7 @@ function mostrarbloco(i) {
             }
             if (i != lbloco) {
                 vida -= 1
-                vida$.innerHTML = `Vida : ${vida}`
+                document.getElementById('vida').innerHTML = `Vida : ${vida}`
                 lbloco = -1
             }
 
