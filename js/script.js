@@ -7,13 +7,6 @@ function shuffleArray(arr) {
     }
 return arr;
 }
-function sleep(milliseconds){
-    var start = new Date().getTime();
-    var end=0;
-    while( (end-start) < milliseconds){
-        end = new Date().getTime();
-    }
-}
 var random = (min, max) => parseInt(Math.random() * (max - min + 1)) + min
 var listnum = [random(0, 1), random(2, 3), random(4, 5), random(6, 7), random(8, 9), random(10, 11), random(12, 13), random(14, 15)]
 for (i in listnum) {
