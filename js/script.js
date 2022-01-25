@@ -1,5 +1,6 @@
 var lbloco = -1
 var vida = 20
+var r = false
 function shuffleArray(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -52,17 +53,20 @@ function mostrarbloco(i) {
         } else {
             if (document.getElementById(`i${i+1}`).getAttribute('src') != 'img/pronto.png') {
                 document.getElementById(`i${i+1}`).setAttribute('src', 'img/dirtd.png')
+                vida -= 1
+                document.getElementById('vida').innerHTML = `Vida : ${vida}`
+                r = true
             }
             if (document.getElementById(`i${lbloco+1}`).getAttribute('src') != 'img/pronto.png') {
                 document.getElementById(`i${lbloco+1}`).setAttribute('src', 'img/dirtd.png')
+                if (r != true) {
+                    vida -= 1
+                    document.getElementById('vida').innerHTML = `Vida : ${vida}`
+                }
             }
-            if (i != lbloco) {
-                vida -= 1
-                document.getElementById('vida').innerHTML = `Vida : ${vida}`
-                lbloco = -1
-            }
-
+            lbloco = -1
         }
+    r = false
     }
     if (document.getElementById(`i${i+1}`).getAttribute('src') != 'img/pronto.png') {
         console.log(document.getElementById(`i${i+1}`).getAttribute('src') + ' antes')
