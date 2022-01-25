@@ -31,18 +31,8 @@ h1 {
 header {
     margin-bottom: 20px;
 }
-#btniniciar {
-    background: rgb(0, 235, 39);
-    border: 3px solid rgb(61, 61, 61);
-    padding: 10px;
-    border-radius: 5px;
-    width: 150px;
-    color: white;
-    font-size: 20px;
-    height: 50px;
-}
 #align {
-    max-width: 1000px;
+    max-height: 1000px;
     background: transparent;
     margin: auto;
     display: flex;
@@ -50,22 +40,19 @@ header {
     justify-content: center;
 }
 .container {
-    max-width: 800px;
-    max-height: 800px;
-    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.205);
     border: solid 5px rgb(0, 255, 64);
     border-radius: 10px;
 }
-.bloco {
+div.bloco {
     max-width: 200px;
     max-height: 200px;
     border: none;
-    background: transparent;
+    padding: 7px;
 }
 .imgbc {
-    max-width: 200px;
-    max-height: 200px;
+    max-height: 20vw;
 }
 table {
-    border-spacing: 0;
+    border-spacing: 0px;
 }
